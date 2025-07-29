@@ -46,8 +46,8 @@ def build_pyramids_for_clipped_data(clipped_dir):
 
 
 if __name__ == "__main__":
-    # 设置路径 - 根据您的图片信息
-    clipped_data_dir = r"E:\GEOdata\pemefrost\QTP_permfrost_change_data_1961_2020\cjy1961_2020"
+    # 设置路径 - 
+    clipped_data_dir = r"E:\GEOdata\LUCC\1992-2015ESA300\cjy1992_2015"
 
     # 调用函数建立金字塔
     build_pyramids_for_clipped_data(clipped_data_dir)
