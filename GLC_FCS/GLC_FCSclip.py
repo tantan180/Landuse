@@ -24,13 +24,13 @@ def batch_clip_tif(input_dir, output_dir, shp_path, years=None):
     # 如果没有指定年份，则处理所有年份
     if years is None:
         # 获取所有年份文件夹
-        year_folders = glob.glob(os.path.join(input_dir, '*_TTOP'))
+        year_folders = glob.glob(os.path.join(input_dir, '*'))
         years = [os.path.basename(f).split('_')[0] for f in year_folders]
 
     # 处理每个年份
     for year in years:
         # 构建输入文件夹路径
-        year_folder = os.path.join(input_dir, f"{year}_TTOP")
+        year_folder = os.path.join(input_dir, f"{year}")
 
         # 查找该年份下的TIFF文件
         tif_files = glob.glob(os.path.join(year_folder, '*.tif'))
@@ -43,7 +43,7 @@ def batch_clip_tif(input_dir, output_dir, shp_path, years=None):
         input_tif = tif_files[0]
 
         # 构建输出文件名
-        output_tif = os.path.join(output_dir, f"GLC_FCS30_{year}_clip.tif")
+        output_tif = os.path.join(output_dir, f"cjy300_{year}_clip.tif")
 
         print(f"正在处理: {year}年数据...")
 
@@ -63,8 +63,8 @@ def batch_clip_tif(input_dir, output_dir, shp_path, years=None):
 
 if __name__ == "__main__":
     # 设置路径 (根据您的实际路径修改)
-    base_dir = r"E:\GEOdata\冻土分布\青藏高原冻土变化数据集（1961-2020）\下载\青藏高原冻土变化数据集（1961-2020）\Frozen ground change data set in the Tibetan Plateau\TTOP"
-    output_dir = r"E:\GEOdata\冻土分布\青藏高原冻土变化数据集（1961-2020）\cjy1961_2020"  # 输出目录
+    base_dir = r"E:\GEOdata\LUCC\1992-2015ESA300\ESA_sjy_1992_2015"
+    output_dir = r"E:\GEOdata\LUCC\1992-2015ESA300\cjy1992_2015"  # 输出目录
     shp_file = r"E:\GEOdata\长江源\长江源区径流及土壤水分变化（2003-2018）\cjy_region_Buffer.shp"  # 替换为您的矢量文件路径
 
     # 可选: 指定要处理的特定年份
