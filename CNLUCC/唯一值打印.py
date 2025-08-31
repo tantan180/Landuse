@@ -5,10 +5,10 @@ import pandas as pd
 import rasterio
 
 # ① 设置你的根目录（就是包含 1990、1995… 这些年份文件夹的目录）
-root = r"E:\GEOdata\LUCC\CNLUCC\CNLUCC_clipped"
+root = r"E:\GEOdata\LUCC\CNLUCC\30m"
 
 # ② 输出 CSV 路径
-out_csv = os.path.join(root, "CNLUCC_unique_values.csv")
+out_csv = os.path.join(root, "CNLUCC_CLCD_unique_values.csv")
 
 rows = []
 

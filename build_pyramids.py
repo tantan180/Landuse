@@ -47,7 +47,7 @@ def build_pyramids_for_clipped_data(clipped_dir):
 
 if __name__ == "__main__":
     # 设置路径 - 
-    clipped_data_dir = r"E:\GEOdata\LUCC\1992-2015ESA300\cjy1992_2015"
+    clipped_data_dir = r"E:\GEOdata\LUCC\CNLUCC\CNLUCC_CLCD\reclass_aea"
 
     # 调用函数建立金字塔
     build_pyramids_for_clipped_data(clipped_data_dir)
