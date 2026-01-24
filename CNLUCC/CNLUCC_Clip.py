@@ -58,9 +58,9 @@ def batch_clip_raster(input_dir, output_dir, clip_shapefile):
 
 if __name__ == "__main__":
     # 设置路径
-    input_directory = r"E:\\GEOdata\\LUCC\\1980-2023_1kmCNLUCC\\250506_中科院全国1km土地利用历史数据\\中科院1km土地利用\\TIF格式"  # 替换为您的CNLUCC数据根目录
-    output_directory = r"E:\\GEOdata\\LUCC\\1980-2023_1kmCNLUCC\\CNLUCC_clipped"  # 替换为您想要的输出目录
-    clip_shapefile_path = r"E:\\GEOdata\\LUCC\\1980-2023_1kmCNLUCC\\cjy_region_CNLUCC.shp"  # 替换为您的研究区边界文件
+    input_directory = r"H:\BaiduNetdiskDownload\CNLUCC_1000M"  # 替换为您的CNLUCC数据根目录
+    output_directory = r"H:\BaiduNetdiskDownload\CNLUCC_1000M\\CNLUCC_clipped"  # 替换为您想要的输出目录
+    clip_shapefile_path = r"E:\GEOdata\LUCC\CNLUCC\cjy_region_CNLUCC.shp"  # 替换为您的研究区边界文件
 
     # 执行批量裁剪
     batch_clip_raster(input_directory, output_directory, clip_shapefile_path)
